@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The "X for Y" Business Idea Generator</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74PL54LR6Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-74PL54LR6Z');
+    </script>
+    <title>Billion Dollar Pitches</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for a bit more flair */
@@ -45,49 +54,51 @@
 </head>
 <body>
 
-<div class="card max-w-lg w-full p-8 md:p-10 rounded-xl border border-amber-500/50">
+<div class="card max-w-2xl w-full p-8 rounded-xl border border-amber-500/50">
     
-    <!-- Simplified Intro Text - TONE CHANGE -->
-    <p class="text-amber-400 text-center mb-4 text-sm font-semibold tracking-widest uppercase">The only thing standing between you and the yacht is THIS idea.</p>
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-black text-white mb-2 tracking-tighter">BILLION DOLLAR PITCHES</h1>
+        <p class="text-amber-400 text-sm font-bold tracking-widest uppercase">The only thing standing between you and the yacht is THIS idea.</p>
+    </div>
 
-    <!-- Generate Button - TONE CHANGE -->
     <div class="mb-8">
-        <button id="generateButton" class="btn-primary w-full text-white font-extrabold py-3 rounded-lg shadow-2xl hover:shadow-amber-500/30 focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-opacity-50 text-xl tracking-widest">
-            Click me to generate your billion dollar idea
+        <button id="generateButton" class="btn-primary w-full text-white font-extrabold py-4 rounded-lg shadow-2xl hover:shadow-amber-500/30 focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-opacity-50 text-xl tracking-widest">
+            CLICK ME TO GENERATE YOUR BILLION DOLLAR IDEA
         </button>
     </div>
 
-    <!-- Result Display Section -->
-    <div id="resultContainer" class="hidden">
-        
-        <!-- LOGO SECTION REMOVED -->
-
-        <div class="p-6 bg-gray-900 rounded-lg border border-amber-500/70">
-            <h2 class="text-lg font-bold text-amber-500 mb-3 flex items-center tracking-wider">
-                <svg class="w-6 h-6 mr-2 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v15m-3-7l3 3m0 0l3-3"></path></svg>
-                This Is The Next Billion-Dollar Valuation
+    <div id="resultContainer" class="hidden space-y-6">
+        <div class="p-6 bg-gray-900 rounded-lg border-2 border-amber-500 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-2 py-1">UNICORN STATUS</div>
+            <h2 class="text-sm font-bold text-amber-500 mb-2 tracking-widest uppercase flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5a8 8 0 100 16 8 8 0 000-16z"/></svg>
+                This Is The Next Billion Dollar Valuation
             </h2>
-            <div class="border-b border-gray-700 pb-4 mb-4">
-                <p class="text-3xl font-extrabold text-white tracking-tight" id="ideaText"></p>
-            </div>
-            <p class="text-md text-amber-300 italic font-medium" id="pitchText"></p>
+            <p class="text-3xl md:text-4xl font-black text-white leading-tight mb-4" id="ideaText"></p>
         </div>
 
-        <!-- Expanded Pitch Section -->
-        <div id="expandedPitchContainer" class="mt-6 pt-4 border-t border-amber-500/50">
+        <div class="p-6 bg-gray-900 rounded-lg border-2 border-red-500 relative overflow-hidden">
+            <h2 class="text-sm font-bold text-red-500 mb-2 tracking-widest uppercase flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                The Billion Dollar Problem
+            </h2>
+            <p class="text-lg text-gray-300 font-medium italic border-l-4 border-red-500 pl-4" id="problemText"></p>
+        </div>
+
+        <div class="border-t border-gray-700 pt-6">
             
-            <div class="mb-4 p-4 bg-gray-900 rounded-lg shadow-xl border border-amber-500">
-                <span class="font-extrabold text-amber-400 block mb-1 text-lg">SHARK TANK CLOSING PITCH: CASH ONLY!</span>
-                <span id="sharkTankPitch" class="text-gray-200"></span>
+            <!-- Shark Tank Closer -->
+            <div class="mb-6 p-5 bg-gray-800 rounded border border-amber-500/50 shadow-inner">
+                <span class="text-amber-500 text-xs font-bold uppercase block mb-2">The Shark Tank Closer</span>
+                <p id="sharkTankPitch" class="text-white font-medium text-lg"></p>
             </div>
             
-            <!-- NEW Sample Names Section -->
-            <div class="p-4 bg-gray-700 rounded-lg border border-amber-500/50 mt-4">
-                <span class="font-extrabold text-amber-400 block mb-2 uppercase tracking-wider">HIGH-ROLLER NAME STACK:</span>
-                <span id="sampleNames" class="text-white font-mono text-sm tracking-wider"></span>
+            <!-- Names -->
+            <div class="p-4 bg-gray-900/50 rounded border border-gray-700">
+                <span class="text-gray-500 text-xs font-bold uppercase block mb-2">High-Roller Name Stack</span>
+                <div id="sampleNames" class="flex flex-wrap gap-2"></div>
             </div>
         </div>
-        <!-- End Expanded Pitch Section -->
     </div>
 </div>
 
@@ -100,442 +111,146 @@
         const valuation = (Math.random() * 5 + 0.5).toFixed(1);
 
         return {
-            market: `TAM: $${value} ${unit}.`, 
+            market: `$${value} ${unit}`, 
             pitch: `We're seeking $${valuation} Million for 10% equity. We're capitalizing on a massive, underserved, multi-${unit.toLowerCase()} market.`
         };
     };
 
-    // Helper to generate a list of punchy startup names with more puns and blends
+    // Helper to generate a list of punchy startup names
     const generateNames = (x, y) => {
-        const yRoot = y.replace(/s$/, '').replace(/\s/g, ''); // Simple singular root of Y
-        const yClean = y.replace(/\s/g, ''); // Remove spaces
-        const yCap = yRoot.charAt(0).toUpperCase() + yRoot.slice(1);
-        const yPrefix = yRoot.substring(0, Math.min(yRoot.length, 3));
-        const xPrefix = x.substring(0, Math.min(x.length, 3));
-        
-        const names = [];
-        const techSuffixes = ["ify", "OS", "Ware", "Base", "Link", "Sync", "Hub", "Verse", "Go", "Fi", "AI"];
-        const actionVerbs = ["Tap", "Key", "Stream", "Flow", "Go", "Zen", "Share", "Insta", "Cloud", "Forge", "Apex", "Nova"];
-        
-        // Punning/Thematic Names (manual mapping for punchy ideas)
-        const puns = {
-            'Compliance': ['Complyer', 'Regulate.ly', 'RuleFlow', 'AuditAI'],
-            'Invoices': ['Invoicer', 'DueSense', 'BillRight', 'PayFlow'],
-            'Focus': ['Focify', 'ClearMind.ai', 'ZenStream', 'DeepWork'],
-            'Robots': ['Mechify', 'BotBase', 'SynapseAI', 'Automatix'],
-            'Pineapples': ['PineaPay', 'AnanaHub', 'PineLink', 'FruitFi'],
-            'Glaciers': ['Glacia.ai', 'IceFlow', 'CryoVerse', 'FrostSync'],
-            'Ambition': ['AmbiGo', 'Aimbition', 'Goalify', 'Ascent'],
-            'Procrastination': ['Procrastinow', 'GetDone', 'FocusLeap', 'Actionize'],
-            'NFTs': ['TokenTap', 'NFTSync', 'MintHub', 'CryptoArt'],
-            'Spaghetti': ['PastaPal', 'NoodleNet', 'SauceCo', 'CarbHub'],
-            'Trombones': ['SlideStream', 'BrassBase', 'Trombonely', 'BlastNote'],
-            'Beekeeping': ['Beehive.co', 'HoneyHub', 'BuzzTap', 'ApiaryOS'],
-            'Librarians': ['LibriFlow', 'BookBase', 'ShelfShare', 'CardCat'],
-            'Yachts': ['Yachtify', 'BoatHub', 'TideFlow', 'MarinaLink'],
-            'Soccer': ['KickSync', 'PitchBase', 'GoalFlow', 'StrikerAI'],
-            'Fine Art': ['Artify', 'CanvasHub', 'Curate.ly', 'BrushBase'],
-            'Vinyl Records': ['Waxify', 'VinylStream', 'GrooveOS', 'NeedleDrop'],
-            'Construction Cranes': ['CraneShare', 'LiftLink', 'HoistHub', 'SkyRig'],
-            'Elder Care': ['CareFlow', 'SageLink', 'ElderZen', 'SeniorOS'],
-            'Legal Filings': ['Filing.ai', 'LegalSync', 'JurisFlow', 'WritBase'],
-            'Regret': ['RewindApp', 'ClearPath', 'PastSense', 'DecideBetter'],
-            'Bonsai Trees': ['BonsaiBud', 'TrunkBase', 'ZenGrows', 'MicroRoot'],
-            'Attention': ['Attentify', 'MindSync', 'FocusTap', 'Presence'],
-            'Digital Privacy': ['Privex', 'Cloakware', 'Hide.me', 'CipherGo'],
-            'Model Trains': ['Trackify', 'GaugeHub', 'RailDeck', 'HobbyRun'],
-            'Small Talk': ['ChatTap', 'VibeCheck', 'SocialSync', 'IceBreak'],
-            'Exotic Houseplants': ['LeafLink', 'Growify', 'FloraOS', 'JungleBox'],
-            'Data Centers': ['ServerShare', 'CoreRent', 'DataVerse', 'RackSync'],
-            'Private Jets': ['AeroShare', 'JetSet.io', 'SkyFlow', 'Tailwind'],
-            'Sourdough Starters': ['StarterStack', 'DoughFi', 'Rise.co', 'CultureKit'],
-            'Empathy': ['Empathify', 'ConnectOS', 'HeartSync', 'ListenAI'],
-            'Reputation': ['ReputaDAO', 'TrustLink', 'CrediFi', 'PraiseBase'],
-            'Terrariums': ['GlassGrow', 'MiniScape', 'TerraBase', 'EcoKit'],
-            'Model Rockets': ['Boostify', 'LaunchLink', 'RocketHub', 'AstroKit'],
-            'Taxidermy': ['Stuffy', 'Preserve.co', 'StanceHub', 'Mountify'],
-            'Puppetry': ['Marionette.ai', 'Puppetron', 'StringLink', 'VentiBot'],
-            'Commercial Kitchens': ['KitchShare', 'PrepHub', 'ChefLink', 'PrepStation'],
-            'Patents': ['Patently', 'IPVault', 'ClaimHub', 'IdeaSecure'],
-            'Antiques': ['Aged.io', 'Heirloom', 'VintageFi', 'RelicHub'],
-            'Rare Teas': ['TeaLeaf', 'SteepSync', 'InfuseOS', 'BrewBase'],
-            'Collectibles Cards': ['Cardify', 'SlabHub', 'GradedLink', 'RarityDeck'],
-            'Stand-Up Comedy': ['GiggleBot', 'MicDrop', 'SetList', 'JesterAI'],
-            'Pen & Paper RPGs': ['DiceBase', 'Questify', 'LootLink', 'DungeonFlow'],
-            'Espresso Machines': ['CremaFi', 'GrindHub', 'ShotLink', 'BeanBase'],
-            'Urban Art': ['GraffitiFi', 'MuralHub', 'StreetVerse', 'TagBase'],
-            'Home Automation': ['SmartFlow', 'HomeSync', 'Automate.ai', 'WiredOS'],
-            'Clowns': ['ClownShare', 'FunnyFi', 'Nose.co', 'BigShoe'],
-            'Magicians': ['MagicSync', 'TrickHub', 'Illusionify', 'Prestige'],
-            'Mime Artists': ['SilentLink', 'Mime.io', 'GestureOS', 'NoTalk'],
-            'Ventriloquism': ['VoiceBase', 'DummyLink', 'TalkBot', 'EchoVibe'],
-            'Juggling': ['Juggler.ai', 'Tossify', 'CatchHub', 'ArcadeFlow'],
-            'Balloon Animals': ['TwistLink', 'AirSculpt', 'Balloons.co', 'Puffer'],
-            'Offshore Wind Farms': ['AeroTide', 'WindFlow', 'SeaGen', 'TurbineOS'],
-            'Existential Dread': ['Dreadless', 'VoidSync', 'EgoFlow', 'WhyOS'],
-            'Lucha Libre Wrestling': ['LuchaVerse', 'MaskHub', 'RumbleGo', 'ArenaFi'],
-            'Artisanal Bread': ['Crustify', 'DoughBase', 'BakeLink', 'LoafOS'],
-            'Guitars': ['FretLink', 'StrumBase', 'Acoustify', 'RiffHub'],
-            'Wine Caves': ['CellarShare', 'VinoHub', 'GrapeFi', 'CaskLink'],
-            'Self-Actualization': ['Actuali.ai', 'AscendOS', 'PeakFlow', 'PurposeHub'],
-            'Microplastics': ['PlastiSense', 'NanoClean', 'PolyFlow', 'ToxinBase'],
-            'Tequila': ['AgaveLink', 'TequilaFi', 'ProofBase', 'ShotSync'],
-            'Rare Earth Minerals': ['MineLink', 'Earthy', 'GemsOS', 'ElementFi'],
-            'Emotional Baggage': ['Unpack.me', 'BaggageFlow', 'ClearLoad', 'PastLink'],
-            'Sleep Paralysis': ['DreamGuard', 'WokeFlow', 'Nocturne', 'SlumberAI'],
-            'Deep Sea Exploration': ['AquaLink', 'DiveVerse', 'OceanOS', 'TrenchBase'],
-            'Jetskis': ['JetShare', 'SkiFlow', 'TideLink', 'WaveGo'],
-            'Soccer': ['Goalify', 'PitchBase', 'StrikerAI', 'FootFi'],
-            'Drones': ['DroneLink', 'SkyBase', 'AeroSync', 'FlyFi'],
-            'Fine Art': ['Artify', 'CanvasHub', 'Curate.ly', 'BrushBase'],
-            'Yoga': ['ZenFlow', 'PoseSync', 'AsanaHub', 'MindFi'],
-            'NFTs': ['TokenTap', 'NFTSync', 'MintHub', 'CryptoArt'],
-            'Invoices': ['Invoicer', 'DueSense', 'BillRight', 'PayFlow'],
-            'Compliance': ['Complyer', 'Regulate.ly', 'RuleFlow', 'AuditAI'],
-            'Feedback': ['FeedSense', 'Loopback', 'VibeCheck', 'ReviewGo'],
-            'Silence': ['QuietOS', 'MuteSync', 'StillBase', 'ZenZone'],
-            'Construction Cranes': ['CraneShare', 'LiftLink', 'HoistHub', 'SkyRig'],
-            'Elder Care': ['CareFlow', 'SageLink', 'ElderZen', 'SeniorOS'],
-            'Legal Filings': ['Filing.ai', 'LegalSync', 'JurisFlow', 'WritBase'],
-            'Regret': ['RewindApp', 'ClearPath', 'PastSense', 'DecideBetter'],
-            'Personal Identity': ['IDBase', 'Verify.me', 'TrueFlow', 'AuthLink'],
-            'Attention': ['Attentify', 'MindSync', 'FocusTap', 'Presence'],
-            'Vinyl Records': ['Waxify', 'VinylStream', 'GrooveOS', 'NeedleDrop'],
-            'Bonsai Trees': ['BonsaiBud', 'TrunkBase', 'ZenGrows', 'MicroRoot'],
-            'Custom Keycaps': ['Capify', 'KeyBase', 'PressLink', 'ClickHub'],
-            'Board Games': ['Boardify', 'Tabletop', 'GameFlow', 'DiceHub'],
-            'Yachts': ['Yachtify', 'BoatHub', 'TideFlow', 'MarinaLink'],
-            'Wedding Dresses': ['GownShare', 'VeilLink', 'BridalFi', 'DressBase'],
-            'Farm Equipment': ['TractorShare', 'YieldLink', 'AgriBase', 'FarmFi'],
-            'Industrial 3D Printers': ['PrintShare', 'FabLink', 'MakerFi', 'ProtoHub'],
-            'Microscope Time': ['MicroShare', 'ScopeLink', 'NanoFi', 'CellBase'],
-            'Shipping Containers': ['BoxLink', 'CargoFi', 'ShipSync', 'TradeBase'],
-            'Offices': ['DeskShare', 'SpaceLink', 'WorkFi', 'OfficeHub'],
-            'Recording Studios': ['StudioShare', 'MicLink', 'SoundFi', 'MixBase'],
-            'Solar Panels': ['PanelShare', 'SunLink', 'WattFi', 'EnergyHub'],
-            'Data Scientists': ['DataShare', 'ModelLink', 'AnalyzeFi', 'ScienceHub'],
-            'Procrastination': ['Procrastinow', 'GetDone', 'FocusLeap', 'Actionize'],
-            'Ambition': ['AmbiGo', 'Aimbition', 'Goalify', 'Ascent'],
-            'Focus': ['Focify', 'ClearMind.ai', 'ZenStream', 'DeepWork'],
-            'Trust': ['TrustLink', 'CrediFi', 'Verify.me', 'AuthentiGo'],
-            'Bureaucracy': ['RuleFlow', 'FormBase', 'Processify', 'RedTape'],
-            'Inspiration': ['MuseLink', 'IdeaFlow', 'SparkGo', 'VisionHub'],
-            'Karma': ['KarmaFi', 'BalanceLink', 'GoodDeeds', 'MoralSync'],
-            'Small Talk': ['ChatTap', 'VibeCheck', 'SocialSync', 'IceBreak'],
-            'Exotic Houseplants': ['LeafLink', 'Growify', 'FloraOS', 'JungleBox'],
-            'Fountain Pens': ['InkLink', 'NibBase', 'WriteFi', 'PenFlow'],
-            'Mechanical Watches': ['TimeShare', 'WatchLink', 'LuxeFi', 'GearHub'],
-            'Vintage Video Games': ['CartridgeFi', 'RetroLink', 'PixelHub', 'GameFlow'],
-            'Home Brewing': ['BrewLink', 'MaltBase', 'HoppsFi', 'KettleHub'],
-            'Rare Spices': ['SpiceLink', 'AromaBase', 'FlavorFi', 'HerbHub'],
-            'Astrophotography': ['AstroLink', 'StarBase', 'ScopeFi', 'GalaxyHub'],
-            'Beekeeping': ['Beehive.co', 'HoneyHub', 'BuzzTap', 'ApiaryOS'],
-            'Sourdough Starters': ['StarterStack', 'DoughFi', 'Rise.co', 'CultureKit'],
-            'Terrariums': ['GlassGrow', 'MiniScape', 'TerraBase', 'EcoKit'],
-            'Model Rockets': ['Boostify', 'LaunchLink', 'RocketHub', 'AstroKit'],
-            'Custom Sneakers': ['Kickify', 'ShoeBase', 'SoleLink', 'StepFi'],
-            'Comic Books': ['PanelLink', 'GeekBase', 'ComicFi', 'HeroHub'],
-            'Vintage Cameras': ['LensLink', 'ShutterFi', 'FilmBase', 'PhotoHub'],
-            'Fly Fishing': ['FlyLink', 'ReelBase', 'CastFi', 'TroutHub'],
-            'Rock Climbing': ['ClimbLink', 'HarnessFi', 'WallBase', 'RopeHub'],
-            'Escape Rooms': ['EscapeFi', 'PuzzleLink', 'RiddleHub', 'LockBase'],
-            'Lego Sets': ['BrickLink', 'LegoFi', 'BlockBase', 'BuildHub'],
-            'Dungeons and Dragons': ['DiceBase', 'Questify', 'LootLink', 'DungeonFlow'],
-            'Geocaching': ['CacheLink', 'GeoFi', 'StashBase', 'HiderHub'],
-            'Taxidermy': ['Stuffy', 'Preserve.co', 'StanceHub', 'Mountify'],
-            'Bird Watching': ['ChirpLink', 'FeatherFi', 'NestBase', 'FlockHub'],
-            'Calligraphy': ['InkLink', 'PenBase', 'ScriptFi', 'WriteHub'],
-            'Locksmithing': ['KeyLink', 'LockBase', 'SecureFi', 'BoltHub'],
-            'Genealogy': ['FamilyLink', 'TreeFi', 'GeneBase', 'RootHub'],
-            'Puppetry': ['Marionette.ai', 'Puppetron', 'StringLink', 'VentiBot'],
-            'Collectibles Cards': ['Cardify', 'SlabHub', 'GradedLink', 'RarityDeck'],
-            'Stand-Up Comedy': ['GiggleBot', 'MicDrop', 'SetList', 'JesterAI'],
-            'Pen & Paper RPGs': ['DiceBase', 'Questify', 'LootLink', 'DungeonFlow'],
-            'Rare Teas': ['TeaLeaf', 'SteepSync', 'InfuseOS', 'BrewBase'],
-            'Espresso Machines': ['CremaFi', 'GrindHub', 'ShotLink', 'BeanBase'],
-            'Urban Art': ['GraffitiFi', 'MuralHub', 'StreetVerse', 'TagBase'],
-            'Home Automation': ['SmartFlow', 'HomeSync', 'Automate.ai', 'WiredOS'],
-            'Custom Dolls': ['DollLink', 'ToyBase', 'CustoFi', 'PlayHub'],
-            'Vintage Clothing': ['Vintagify', 'StyleLink', 'ThriftBase', 'ClotheFi'],
-            'Hot Rods': ['RodLink', 'CustomFi', 'MuscleBase', 'EngineHub'],
-            'Model Airplanes': ['AeroLink', 'ModelFi', 'WingBase', 'FlyHub'],
-            'Sailing': ['SailLink', 'BoatFi', 'OceanBase', 'WindHub'],
-            'Archery': ['ArrowLink', 'BowFi', 'TargetBase', 'QuiverHub'],
-            'Pottery': ['ClayLink', 'PotFi', 'WheelBase', 'KilnHub'],
-            'Needlepoint': ['NeedleLink', 'StitchFi', 'YarnBase', 'EmbroidHub'],
-            'Clowns': ['ClownShare', 'FunnyFi', 'Nose.co', 'BigShoe'],
-            'Magicians': ['MagicSync', 'TrickHub', 'Illusionify', 'Prestige'],
-            'Mime Artists': ['SilentLink', 'Mime.io', 'GestureOS', 'NoTalk'],
-            'Ventriloquism': ['VoiceBase', 'DummyLink', 'TalkBot', 'EchoVibe'],
-            'Juggling': ['Juggler.ai', 'Tossify', 'CatchHub', 'ArcadeFlow'],
-            'Balloon Animals': ['TwistLink', 'AirSculpt', 'Balloons.co', 'Puffer'],
-            'Tequila': ['AgaveLink', 'TequilaFi', 'ProofBase', 'ShotSync'],
-            'Guitars': ['FretLink', 'StrumBase', 'Acoustify', 'RiffHub'],
-            'Wine Caves': ['CellarShare', 'VinoHub', 'GrapeFi', 'CaskLink'],
-            'Microplastics': ['PlastiSense', 'NanoClean', 'PolyFlow', 'ToxinBase'],
-            'Deep Sea Exploration': ['AquaLink', 'DiveVerse', 'OceanOS', 'TrenchBase'],
-            'Lucha Libre Wrestling': ['LuchaVerse', 'MaskHub', 'RumbleGo', 'ArenaFi'],
-            'Artisanal Bread': ['Crustify', 'DoughBase', 'BakeLink', 'LoafOS'],
-            'High-End Coffee Beans': ['BeanLink', 'CoffeeFi', 'GrindBase', 'ShotHub'],
-            'Luxury Pens': ['PenLink', 'WriteFi', 'NibBase', 'InkHub'],
-            'Custom Motorcycles': ['BikeLink', 'MotoFi', 'RideBase', 'EngineHub'],
-            'Vintage Computers': ['RetroLink', 'CompFi', 'ByteBase', 'DataHub'],
-            'Rare Stamps': ['StampLink', 'CollectiFi', 'PhilatBase', 'PostHub'],
-            'Boutique Perfumes': ['ScentLink', 'AromaFi', 'FragranceBase', 'PerfumeHub'],
-            'Exotic Leathers': ['HideLink', 'LeatherFi', 'SkinBase', 'TanneryHub'],
-            'Haute Couture': ['CoutureLink', 'FashionFi', 'StyleBase', 'GownHub'],
-            'Micro-Breweries': ['BrewLink', 'BeerFi', 'TapBase', 'HoppsHub'],
-            'Food Trucks': ['TruckLink', 'FoodFi', 'StreetBase', 'CurbHub'],
-            'Survival Gear': ['GearFi', 'PrepBase', 'RationHub', 'SurviveLink'],
-            'Ghost Hunting': ['GhostLink', 'ParaFi', 'EctoBase', 'HauntHub'],
-            'Competitive Eating': ['EatLink', 'CompeteFi', 'FeastBase', 'BiteHub'],
-            'Fossil Hunting': ['FossilLink', 'DigFi', 'BoneBase', 'PaleoHub'],
-            'Restoration Projects': ['RestoreLink', 'FixFi', 'RehabBase', 'RepairHub'],
-            'Amateur Radio': ['HamLink', 'RadioFi', 'SignalBase', 'FreqHub'],
-            'Cosplay': ['CosplayLink', 'CostumeFi', 'PropBase', 'WigHub'],
-            'Podcasting': ['PodLink', 'CastFi', 'MicBase', 'AudioHub'],
-            'E-Bikes': ['EBikeLink', 'RideFi', 'ChargeBase', 'PedalHub'],
-            'Smart Luggage': ['LuggageLink', 'SmartFi', 'TravelBase', 'BagHub'],
-            'Vertical Farms': ['VertiLink', 'FarmFi', 'GrowBase', 'PlantHub'],
-            'Digital Art Commissions': ['ArtLink', 'CommishFi', 'PaintBase', 'DrawHub'],
-            'Aged Cheese': ['CheeseLink', 'CurdFi', 'DairyBase', 'WedgeHub'],
-            'Bespoke Suits': ['SuitLink', 'TailorFi', 'ClothBase', 'StyleHub'],
-            'Hot Air Balloons': ['BalloonLink', 'AirFi', 'FlightBase', 'PilotHub'],
-            'Formula 1 Memorabilia': ['F1Link', 'RaceFi', 'TrackBase', 'AutoHub'],
-            'High Altitude Kites': ['KiteLink', 'AirFi', 'FlyBase', 'WindHub'],
-            'Biohacking': ['BioLink', 'HackFi', 'GeneBase', 'CodeHub'],
-            'Existential Dread': ['Dreadless', 'VoidSync', 'EgoFlow', 'WhyOS'],
-            'Emotional Baggage': ['Unpack.me', 'BaggageFlow', 'ClearLoad', 'PastLink'],
-            'Offshore Wind Farms': ['AeroTide', 'WindFlow', 'SeaGen', 'TurbineOS'],
-            'Private Jets': ['AeroShare', 'JetSet.io', 'SkyFlow', 'Tailwind'],
-            'Data Centers': ['ServerShare', 'CoreRent', 'DataVerse', 'RackSync'],
-            'Reputation': ['ReputaDAO', 'TrustLink', 'CrediFi', 'PraiseBase'],
-            'Empathy': ['Empathify', 'ConnectOS', 'HeartSync', 'ListenAI'],
-            'Lucha Libre Wrestling': ['LuchaVerse', 'MaskHub', 'RumbleGo', 'ArenaFi'],
-            'Artisanal Bread': ['Crustify', 'DoughBase', 'BakeLink', 'LoafOS'],
-            'Guitars': ['FretLink', 'StrumBase', 'Acoustify', 'RiffHub'],
-            'Wine Caves': ['CellarShare', 'VinoHub', 'GrapeFi', 'CaskLink'],
-            'Self-Actualization': ['Actuali.ai', 'AscendOS', 'PeakFlow', 'PurposeHub'],
-            'Tequila': ['AgaveLink', 'TequilaFi', 'ProofBase', 'ShotSync'],
-            'Rare Earth Minerals': ['MineLink', 'Earthy', 'GemsOS', 'ElementFi'],
-            'Sleep Paralysis': ['DreamGuard', 'WokeFlow', 'Nocturne', 'SlumberAI'],
-            'Deep Sea Exploration': ['AquaLink', 'DiveVerse', 'OceanOS', 'TrenchBase'],
-            'Cognitive Load': ['Loadless', 'ClearMind', 'CogniSync', 'MindFlow'],
-            'Inertia': ['Actionify', 'ActionLink', 'Momentum', 'Kinetic'],
-            'Synergy': ['SynLink', 'Synergize', 'MergeBase', 'FlowHub'],
-            'Hunches': ['HunchFi', 'GutLink', 'Instinct', 'InsightHub'],
-            'Proof of Concept': ['ProofFi', 'ConceptLink', 'TestBase', 'VerifyHub'],
-            // --- NEW HIGH-FRICTION ASSETS (14) ---
-            'Propeller Hats': ['HatShare', 'SpinLink', 'PropFi', 'WindCap'],
-            'Antique Typewriters': ['Typelink', 'KeyFi', 'ScriptBase', 'InkHub'],
-            'Arcade Cabinets': ['ArcadeShare', 'CoinLink', 'GameFi', 'PixelBase'],
-            'Llama Rental': ['LlamaShare', 'AlpacaFi', 'WoolLink', 'TrekBase'],
-            'Giant Novelty Checks': ['CheckFi', 'BigWin', 'GiantPay', 'PromoLink'],
-            'Tax Liens': ['LienLink', 'TaxFi', 'DebtBase', 'AssetHub'],
-            'Mural Spaces': ['MuralShare', 'WallLink', 'ArtFi', 'CanvasHub'],
-            'High-Security Safes': ['SafeShare', 'VaultLink', 'SecureFi', 'LockBox'],
-            'Pinball Machines': ['PinballShare', 'FlipLink', 'GameFi', 'Silverball'],
-            'Vintage Synthesizers': ['SynthLink', 'ToneFi', 'KeyBase', 'VibraHub'],
-            'Professional Dancers': ['DanceShare', 'ChoreoFi', 'MoveLink', 'BalletBase'],
-            'Medieval Armor': ['ArmorShare', 'PlateFi', 'KnightLink', 'GauntletHub'],
-            'Snow Globes': ['GlobeShare', 'ShakeFi', 'SceneLink', 'MiniVerse'],
-            'Public Bench Ad Space': ['BenchLink', 'AdFi', 'SeatBase', 'CurbSide'],
-            // --- NEW ABSTRACT CONCEPTS (13) ---
-            'Misinformation': ['FactLink', 'TruthFi', 'VerifyOS', 'DoubtBase'],
-            'Politeness': ['PoliteFi', 'MannerLink', 'CivilityOS', 'GraceHub'],
-            'Good Intentions': ['IntentFi', 'MoralLink', 'PurposeHub', 'HeartBase'],
-            'Office Gossip': ['GossipFi', 'WhisperLink', 'ChatBase', 'TeaHub'],
-            'Dunning-Kruger Effect': ['DunningFi', 'Overconfi', 'EgoLink', 'SkillBase'],
-            'Imposter Syndrome': ['ImposterFi', 'FraudLink', 'FakeBase', 'ConfidenceOS'],
-            'Bad Habits': ['HabitFi', 'QuitterLink', 'CleanSlate', 'RebootOS'],
-            'Inside Jokes': ['JokeLink', 'WinkFi', 'MemeBase', 'InsigniaHub'],
-            'Coincidence': ['CoincideFi', 'ChanceLink', 'FateHub', 'LuckBase'],
-            'Deja Vu': ['DejaFi', 'MemoryLink', 'RecallHub', 'PastSync'],
-            'Buyer\'s Remorse': ['RegretFi', 'BuyBack', 'ReturnLink', 'ClearShop'],
-            'Corporate Buzzwords': ['BuzzwordFi', 'JargonLink', 'BSBase', 'SynergyHub'],
-            'Small Talk': ['ChatTap', 'VibeCheck', 'SocialSync', 'IceBreak'],
-            // --- NEW VERTICAL CONSUMER NICHES/ACTIVITIES (14) ---
-            'Competitive Scrabble': ['WordFi', 'TileLink', 'ScrabbleBase', 'LexiconHub'],
-            'Urban Exploration': ['UrbexLink', 'RuinFi', 'DerelictBase', 'DecayHub'],
-            'Miniature Painting': ['PaintLink', 'BrushFi', 'MiniBase', 'FigurinaHub'],
-            'Acoustic Guitar Effects': ['StrumLink', 'ToneFi', 'PedalBase', 'AcoustiHub'],
-            'Whale Watching': ['WhaleLink', 'OceanFi', 'BlowholeBase', 'MarineHub'],
-            'Professional Wrestling Moves': ['WrestleLink', 'SlamFi', 'MoveBase', 'DropkickHub'],
-            'Unicycling': ['UniShare', 'WheelFi', 'BalanceLink', 'CircusHub'],
-            'Competitive Dog Grooming': ['GroomFi', 'ClipLink', 'DogBase', 'FluffyHub'],
-            'Theatrical Fights': ['FightLink', 'StageFi', 'CombatBase', 'DuelHub'],
-            'Professional Yodeling': ['YodelFi', 'MountainLink', 'VoiceBase', 'AlpacaHub'],
-            'Rubber Chickens': ['ChickenFi', 'SqueakLink', 'PropBase', 'GagHub'],
-            'Home Aquariums': ['AquaLink', 'TankFi', 'FishBase', 'ReefHub'],
-            'Puppet Shows': ['PuppetLink', 'StageFi', 'ShowBase', 'CurtainHub'],
-            'Hot Sauce Collection': ['SauceFi', 'HeatLink', 'ScovilleBase', 'ChiliHub']
-        };
-
-        // 1. Theme-specific Puns/Best Puns
-        if (puns[y]) {
-            // Select up to 2 of the best puns/thematic names
-            names.push(...puns[y].slice(0, 2)); 
-        }
-
-        // 2. Short Blended Name (e.g., NetPine, SlackBot)
-        // Combine X prefix with a catchy part of Y
-        const blendPart = yClean.length > 5 ? yClean.substring(0, 3) : yClean;
-        names.push(xPrefix.charAt(0).toUpperCase() + xPrefix.slice(1) + blendPart.charAt(0).toLowerCase() + blendPart.slice(1));
-        
-        // 3. Action + Y Name
-        const verb = actionVerbs[Math.floor(Math.random() * actionVerbs.length)];
-        names.push(verb + yCap);
-        
-        // 4. Clean Tech Name with Suffix
-        const suffix = techSuffixes[Math.floor(Math.random() * techSuffixes.length)];
-        names.push(yCap + suffix);
-
-
-        // Format and clean up the list
-        return names.map(name => {
-            let formatted = name.charAt(0).toUpperCase() + name.slice(1);
-            
-            // Add a small chance of a catchy domain suffix
-            if (Math.random() < 0.25) {
-                formatted = formatted.replace(/\s/g, "") + ".ai";
-            } else if (Math.random() < 0.25) {
-                formatted = formatted.replace(/\s/g, "") + ".io";
-            } else if (Math.random() < 0.25) {
-                formatted = formatted.replace(/\s/g, "") + ".co";
-            }
-            
-            return formatted;
-        }).filter((value, index, self) => self.indexOf(value) === index).slice(0, 4); // Filter duplicates and cap at 4
+        const root = y.split(' ').pop().replace(/s$/, ''); 
+        const prefix = x.substring(0, 4);
+        const names = [
+            `${prefix}${root}`,
+            `${root}ify`,
+            `${root}.ai`,
+            `The ${root} Protocol`,
+            `${root}DAO`,
+            `${root}X`,
+            `Open${root}`
+        ];
+        // Randomly select 4 unique names
+        const shuffled = names.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 4).map(name => 
+            `<span class="bg-amber-400 text-black px-2 py-1 rounded font-bold text-xs uppercase tracking-wider">${name}</span>`
+        ).join('');
     };
 
-    // Comprehensive list of successful models and their pitch templates - TOTAL 73
-    // Note: This list must be complete for the script to run without error.
+    // Comprehensive list of successful models (X) - 88 TOTAL
     const modelData = {
-        'Uber': { pitch: `It's the on-demand platform connecting certified [Y] experts with users needing immediate, location-based service. No more waiting!`, why: `The [Y] industry is currently dominated by slow, expensive manual booking or high-cost, centralized services. We leverage the gig economy and a simple app interface to provide instant liquidity and transparency to the [Y] supply chain.`, tagline: `We're making [Y] happen at the speed of a tap. Invest in the future of instant services.` },
-        'Airbnb': { pitch: `The peer-to-peer marketplace where users can rent, borrow, or share access to unique, underutilized [Y] within their community.`, why: `Ownership of [Y] is expensive and inefficient. We turn every underutilized [Y] into a profit-generating asset, unlocking billions in latent value through trust and standardized booking protocols.`, tagline: `We're democratizing access to [Y]. Get in now, before we book out the world.` },
-        'Netflix': { pitch: `A subscription service offering exclusive, curated access to a rotating library of digital or physical [Y]. Predictable monthly delight!`, why: `The consumption of [Y] is currently transactional and fragmented. Our sticky subscription model provides predictable revenue and high customer lifetime value (CLV) by making access to [Y] mandatory, not optional.`, tagline: `Stop buying, start subscribing. We're the new predictable model for [Y].` },
-        'Stripe': { pitch: `The embedded finance API that handles all payment processing, compliance, and transactions specifically for businesses dealing in [Y].`, why: `Payments and regulatory compliance are the biggest friction points for the nascent [Y] market. We are the invisible layer of financial infrastructure, taking a small cut of every transaction in this rapidly growing vertical.`, tagline: `We don't sell [Y], we power the future of commerce for it. We are the platform of trust.` },
-        'Slack': { pitch: `A dedicated communication platform for teams collaborating on, managing, or trading high volumes of [Y]. All communication in one place.`, why: `Teams dealing with [Y] rely on scattered email chains and legacy tools, leading to huge inefficiencies. We centralize all data, projects, and discussions around [Y], boosting productivity by 40%.`, tagline: `Stop sending emails about your [Y]. Start collaborating. Your investment powers global B2B efficiency.` },
-        'Shopify': { pitch: `A complete e-commerce solution that lets anyone set up an online store in minutes to sell custom [Y], handling hosting, payments, and inventory.`, why: `Small businesses selling niche [Y] lack the tools to compete online. We provide an end-to-end commerce platform, enabling millions of entrepreneurs to monetize their passion for [Y].`, tagline: `We arm the rebels selling [Y]. Invest in the future of bespoke commerce.` },
-        'Instacart': { pitch: `The personal delivery service that gets any type of [Y] delivered directly to your door in under an hour from local suppliers.`, why: `The last-mile logistics for [Y] is broken, manual, and slow. We provide the crucial digital bridge between local inventory of [Y] and the end consumer, making instant fulfillment a reality.`, tagline: `Get your [Y] now. We own the shortest path between inventory and consumption.` },
-        'Tinder': { pitch: `The ultimate discovery app that uses a simple swipe interface to match users with their ideal, high-quality, or locally available [Y].`, why: `Finding the right [Y] is currently a painful, manual process of searching and vetting. Our gamified discovery engine creates high-intent, instant connections, driving massive user engagement and fast transactions.`, tagline: `Swipe right on your perfect [Y]. We're monetizing serendipity.` },
-        'Twitch': { pitch: `A live-streaming platform focused entirely on creators producing, using, or discussing the best of [Y]. Monetized by community engagement.`, why: `The culture around [Y] is currently static (blogs/videos). We enable interactive, real-time community around [Y], creating a vibrant creator economy with multiple revenue streams (subscriptions, tips, ads).`, tagline: `The world watches [Y] live. We're selling digital seats to the most passionate fans.` },
-        'GitHub': { pitch: `A version control and collaboration platform where the community can contribute, fork, and manage open-source or shared digital blueprints for [Y].`, why: `The development and documentation for [Y] is fragmented and proprietary. We bring the power of open-source collaboration to the [Y] industry, accelerating innovation and standardization.`, tagline: `Every [Y] starts with code. We are the infrastructure for the next generation of invention.` },
-        'ChatGPT': { pitch: `A viral conversational AI platform that leverages a state-of-the-art LLM to generate, summarize, or converse about any topic related to [Y].`, why: `Generating, interpreting, or managing complex data related to [Y] requires massive human effort. Our conversational AI automates this intelligence, embedding AI into every interaction within the [Y] vertical.`, tagline: `We are the conversational layer for the [Y] economy. Invest in the automation of thought.` },
-        'Midjourney': { pitch: `The revolutionary AI model for generating stunning, high-fidelity artistic visuals of imaginary and hyper-realistic [Y] on command.`, why: `Visualization of complex or abstract [Y] is time-consuming for designers and creators. Our proprietary model allows for instant, perfect visual realization of any [Y] concept, slashing design costs.`, tagline: `We're generating the visual future of [Y]. Skip the artist, hire the AI.` },
-        'Red Bull': { pitch: `A premium, category-defining lifestyle brand focused on providing peak energy and performance for consumers engaging with [Y] in extreme and thrilling ways.`, why: `[Y] lacks a charismatic, highly profitable brand champion. We use extreme marketing and cultural curation to create a lifestyle around [Y], yielding massive margins and unrivaled brand loyalty.`, tagline: `We don't sell [Y], we sell the identity. We own the adrenaline.` },
-        'HelloFresh': { pitch: `The subscription box service that delivers pre-portioned ingredients and easy-to-follow recipes for assembling, maintaining, or creating unique [Y].`, why: `The complexity or necessary curation of [Y] creates a high barrier to entry for consumers. We simplify the experience, removing friction and waste, and lock in high monthly recurring revenue (MRR).`, tagline: `We ship the perfect [Y] experience to your door. Invest in convenience and consistency.` },
-        'Lime': { pitch: `The dockless rental app that lets users find, unlock, and pay-per-use for [Y] located anywhere in their city via a simple mobile interface.`, why: `Ownership of [Y] is impractical for most people, and traditional rental is inconvenient. We provide instant, flexible access to [Y], filling a crucial gap in hyper-local transport or utility.`, tagline: `We are the first mile, the last mile, and the in-between for [Y].` },
-        'Ethereum': { pitch: `A decentralized platform leveraging smart contracts and blockchain technology to automate transactions, ownership, and governance related to [Y].`, why: `The industry surrounding [Y] is plagued by trust issues, centralized control, and opaque record-keeping. We use decentralization to ensure trustless, immutable, and verifiable transactions for every instance of [Y].`, tagline: `We remove the middleman for [Y]. We are building the trust layer of the internet.` },
-        'Zillow': { pitch: `The comprehensive online marketplace that aggregates real-time data, valuations, and listings, providing full transparency on the buying, selling, or trading of [Y].`, why: `The opaque pricing and lack of centralized data around [Y] allows insiders to exploit the market. We aggregate all public and proprietary data to give consumers full transparency and accurate valuations, driving engagement.`, tagline: `We are bringing transparency to [Y]. We are the definitive data source.` },
-        'Zoom': { pitch: `The premium, high-fidelity video conferencing platform that enables real-time, interactive, one-on-one or group consulting services centered around [Y].`, why: `Specialized consulting for [Y] is currently limited by geography and scheduling. We provide a frictionless, reliable platform for experts to deliver high-margin services to a global audience instantly.`, tagline: `Distance is no barrier to [Y] expertise. We connect the world's best to the world's neediest.` },
-        'Patreon': { pitch: `A membership platform that allows fans and consumers to directly fund creators, artists, or specialized experts who produce premium content or access related to [Y].`, why: `Niche creators focused on [Y] struggle to escape platform algorithms and ad-revenue reliance. We provide a sustainable, direct subscription income stream, leading to predictable revenue and high creator retention.`, tagline: `We are funding the passion for [Y]. We are the creator-first monetization engine.` },
-        'Duolingo': { pitch: `The gamified educational app that uses short, interactive daily lessons and streaks to help users quickly master the fundamentals and practice of [Y].`, why: `Learning [Y] is typically boring, expensive, and fails to maintain long-term engagement. Our gamified, bite-sized curriculum achieves high daily active user (DAU) rates, proving educational value is the best retention mechanism.`, tagline: `Spend five minutes a day mastering [Y]. We make learning addictive and profitable.` },
-        'AWS': { pitch: `A cloud-based utility that offers scalable, pay-as-you-go infrastructure, computing, and storage services specifically tailored for building and managing [Y] at scale.`, why: `Scaling technology for [Y] requires massive upfront capital expenditure and complex maintenance. We eliminate this friction by providing easily accessible, utility-based, on-demand infrastructure, taking a large recurring cut of the [Y] growth.`, tagline: `Don't build your own [Y] infrastructure. Rent ours. We are the utility company for the digital economy.` },
-        'Peloton': { pitch: `A connected experience combining proprietary, high-end hardware for [Y] with a monthly subscription for live and on-demand instructional content and community leaderboards.`, why: `The [Y] market is fragmented and transactional. We combine premium hardware with sticky, high-margin subscription content, capturing the user's entire journey and generating lucrative recurring revenue.`, tagline: `The future of [Y] is connected. We sell the experience, the community, and the habit.` },
-        'Mint': { pitch: `The unified data aggregator that connects to disparate sources to provide users with a single, clear, comprehensive dashboard for tracking, budgeting, and managing their [Y].`, why: `Managing the data complexity of [Y] is overwhelming for the average consumer or business owner. We aggregate all financial, usage, and status data for [Y] into one simple dashboard, driving high user reliance and deep product stickiness.`, tagline: `We take the chaos out of [Y]. We are the single source of truth for your data.` },
-        'OnlyFans': { pitch: `The private, direct-to-consumer platform where specialized creators can monetize highly niche, exclusive guides, content, or services focused entirely on [Y].`, why: `Experts in [Y] often create content too niche for mass advertising platforms. We provide a decentralized platform that captures 80% of the revenue from highly specialized, loyal fanbases, enabling sustainable niche creation.`, tagline: `Skip the advertisers. We're the direct monetization pipe for the [Y] niche.` },
-        'Harlem Globetrotters': { pitch: `A touring theatrical sports league that combines athletic spectacle, comedy, and audience participation, centered around the sheer **absurdity of [Y]**.`, why: `Live entertainment lacks novelty and audience participation. We infuse the serious technical skill of [Y] with high-production value, creating a unique, repeatable, and highly monetizable touring spectacle with merchandising potential.`, tagline: `Not just [Y], it's a spectacle. We're selling unforgettable family entertainment, and we're damn good at it.` },
-        'Revolut': { pitch: `A mobile-first, zero-fee digital bank or financial service that provides seamless global or hyper-local management, saving, and investing focused on [Y].`, why: `Traditional banking ignores the unique payment and currency needs of the [Y] community. We offer a full suite of digital banking services customized for the [Y] ecosystem, capturing the entire financial life of this underserved segment.`, tagline: `Traditional banks don't get [Y]. We are the finance platform built for your world.` },
-        'Square': { pitch: `The integrated hardware and software platform providing all point-of-sale, inventory, and payment tools necessary for businesses that exclusively deal in [Y].`, why: `Small businesses selling [Y] are forced to use generic, complex POS systems. We provide a beautiful, integrated vertical SaaS solution that solves their entire operational stack, leading to high revenue per customer and powerful network effects.`, tagline: `We power every [Y] transaction, from the inventory to the bank. Invest in the B2B backbone.` },
-        'Discord': { pitch: `The ultimate community platform providing structured voice, video, and text channels for fans and experts to discuss, share, and collaborate around [Y].`, why: `The passionate community around [Y] is scattered across low-quality forums and social media. We provide a single, organized hub for this community, generating high engagement, organic growth, and premium subscription potential.`, tagline: `Where the world talks about [Y]. We are building the future of niche community.` },
-        'Roblox': { pitch: `A user-generated virtual world or metaverse where communities can buy, build, and monetize digital land, assets, and experiences related to [Y].`, why: `The creative passion for [Y] is currently confined to the physical world. We provide a digital sandbox where users can monetize their creations related to [Y], capturing the imagination of the next generation of builders.`, tagline: `Own, build, and monetize your digital [Y]. We are the metaverse for creation.` },
-        'Substack': { pitch: `The direct-to-consumer email publishing platform that allows independent experts and creators to monetize their deep, niche insights and exclusive content about [Y] via subscriptions.`, why: `Expert knowledge about [Y] is hidden behind traditional media paywalls or generic content platforms. We enable experts to capture high-margin revenue directly from their most loyal fans, bypassing traditional media intermediaries.`, tagline: `Read the experts on [Y]. We're selling the signal, not the noise.` },
-        'Klaviyo': { pitch: `The dedicated marketing automation and CRM solution that helps businesses personalize engagement and manage the complex customer journey specifically for products or services related to [Y].`, why: `The customer journey for [Y] is unique and complex, and generic CRMs fail to optimize it. We offer a specialized platform that drives higher conversion and retention rates by automating hyper-personalized communication specific to [Y] buyers.`, tagline: `We automate [Y] sales. We are the intelligence behind the marketing.` },
-        'Warby Parker': { pitch: `A direct-to-consumer (DTC) brand that vertically integrates design, manufacturing, and online sales to offer high-quality, affordably priced [Y] without traditional retail markups.`, why: `The incumbent industry selling [Y] is fragmented and overpriced. By owning the entire supply chain, we offer a superior, design-forward product at a fraction of the cost, building a beloved, high-margin consumer brand.`, tagline: `Better [Y], lower price. We cut out the middleman and passed the value to the consumer.` },
-        'GoFundMe': { pitch: `The centralized social fundraising platform enabling quick, trusted campaigns for personal or community projects dedicated to funding, rescuing, or developing [Y].`, why: `Funding small-scale, personal, or urgent projects related to [Y] is difficult and opaque. We provide a secure, viral platform for social giving, collecting a small fee on billions of dollars of donated capital.`, tagline: `We turn passion for [Y] into collective action. We are the platform for social change.` },
-        'Turo': { pitch: `The peer-to-peer rental marketplace that allows individuals to safely rent out their high-value or specialty [Y] for short-term, insured use.`, why: `High-value [Y] assets sit idle 90% of the time. We unlock the latent income potential of these assets for owners while providing convenient, low-cost access to renters, fully managed by a robust insurance and trust layer.`, tagline: `Don't just own [Y], rent it out. We are the sharing economy for premium assets.` },
-        'Headspace': { pitch: `The hyper-focused wellness app offering guided sessions, soothing soundscapes, and tracking tools to improve mental clarity and emotional resilience related to the management of [Y].`, why: `The psychological stress and mental load associated with [Y] is currently unaddressed. We offer a therapeutic, habit-forming subscription tool that helps users manage their behavioral and emotional response to [Y].`, tagline: `Find your center around [Y]. We are selling daily peace of mind.` },
-        'TikTok': { pitch: `A hyper-personalized, short-form video feed that uses an algorithmic discovery engine to connect users with creators and bite-sized content focused entirely on [Y].`, why: `The information and entertainment around [Y] is currently locked in long-form content or blogs. We leverage a viral, highly addictive short-form format to achieve rapid growth and high engagement among a younger demographic interested in [Y].`, tagline: `We turn passive scrolling into active discovery of [Y]. Invest in virality.` },
-        'Tesla': { pitch: `A vertically integrated consumer brand that sells [Y] directly to the consumer, owns the maintenance network, and leverages software to connect [Y] to a sustainable ecosystem.`, why: `The incumbent [Y] industry relies on slow, expensive dealer/middleman networks. By owning the entire supply chain and controlling the software experience, we achieve industry-leading margins and create intense brand loyalty around sustainable [Y] solutions.`, tagline: `We are the future of [Y]. Invest in vertical innovation.` },
-        'Salesforce': { pitch: `The cloud-based Enterprise CRM and workflow management solution designed specifically to handle the complex sales, service, and data pipeline unique to businesses operating in the [Y] sector.`, why: `Companies dealing in [Y] are forced to use generic, disconnected CRM tools that require massive customization. We provide an out-of-the-box vertical SaaS solution that instantly increases operational efficiency and client satisfaction in the [Y] space.`, tagline: `We manage the entire client lifecycle of [Y]. Invest in the Enterprise backbone.` },
-        'Vanguard': { pitch: `A low-cost, automated investment platform that provides index fund access and passive wealth-building strategies specifically tailored for long-term ownership and stability of [Y].`, why: `Investing in or planning for the future of [Y] is often complex and filled with high-fee brokers. We use an automated, index-based approach to passively build wealth for the [Y] community, capturing billions in AUM (Assets Under Management).`, tagline: `The smart way to invest in [Y]. Low fees, high growth.` },
-        'Pinterest': { pitch: `A visual discovery engine and curated inspiration board platform where users collect, share, and shop for ideas, products, and tutorials related to [Y].`, why: `The journey from inspiration to purchase for [Y] is disjointed. We monetize visual discovery by placing shoppable links directly onto aspirational content, capturing the high-intent consumer right at the point of inspiration.`, tagline: `We are the visual roadmap to buying [Y]. Invest in inspiration.` },
-        'Costco': { pitch: `A members-only, bulk retail model that offers extreme discounts and highly curated selection for essential [Y] products, driving high annual subscription revenue.`, why: `Consumers need high-quality [Y] at predictable, low prices, but traditional retail adds markups. Our high-retention membership model captures revenue upfront while delivering unparalleled value, creating a fiercely loyal customer base.`, tagline: `We sell [Y] wholesale. Your membership is your profit.` },
-        'Medium': { pitch: `A paid content platform that provides a beautifully designed space for expert journalists, analysts, and passionate writers to monetize deep, long-form insights about [Y] via monthly subscriptions.`, why: `The complex analysis of [Y] is often lost in ad-supported clickbait. We provide a platform for high-quality, trustworthy content, appealing to the professional audience willing to pay a premium for verified expertise.`, tagline: `We sell clarity on [Y]. Invest in expertise, not noise.` },
-        'Timeshares': { pitch: `A fractional ownership model where users buy a deeded week or time-slot of access to high-value [Y] assets, managed by a centralized entity.`, why: `Expensive [Y] assets are rarely used by their sole owner. We maximize the utilization rate of [Y] assets by selling time-based access, generating massive revenue upfront via large fees and perpetually via recurring maintenance fees.`, tagline: `We sell guaranteed access, not burdensome ownership. Invest in the perpetual income stream of [Y].` },
-        'Franchise': { pitch: `A standardized, replicable business system where local entrepreneurs pay for the brand, training, and processes to sell [Y] in their territory.`, why: `The market for [Y] is local, but the model lacks consistency and trust. We sell proven, plug-and-play business success, collecting high upfront franchise fees and a percentage of all ongoing revenue from every location.`, tagline: `We don't build [Y] businesses, we multiply them. Invest in our proven blueprints.` },
-        'Gillette': { pitch: `The classic "Bait and Hook" model: sell the primary [Y] hardware at cost (or a loss) and drive high-margin, recurring revenue from essential [Y] consumables.`, why: `We create a captive audience by locking users into a proprietary system. Once they own the core [Y] product, they must continuously purchase our high-margin, exclusive refills, leading to explosive CLV and predictable sales.`, tagline: `The razor is free, the blades are ours. We own the continuous revenue stream from every user of [Y].` },
-        'Consignment': { pitch: `A consignment-based retail model where independent owners submit their specialized or unique [Y] inventory, which we sell for a commission, eliminating all inventory risk.`, why: `The secondary market for [Y] is fragmented and trust is low. We provide a curated, high-trust retail front without tying up capital in inventory, generating high-margin, zero-risk revenue from every successful transaction.`, tagline: `We sell your [Y] for you. We are the risk-free retailer of premium secondary goods.` },
-        'Agency': { pitch: `A service-based agency model that connects and manages the placement of high-demand [Y] professionals, assets, or services, collecting a high percentage commission on every deal.`, why: `Finding and vetting qualified [Y] talent/services is time-consuming and prone to failure. Our human-centric, high-touch agency model ensures quality and placement fit, justifying our high commission rates.`, tagline: `We sell trust and human capital for [Y]. We are the essential matchmakers.` },
-        'Pawn Shop': { pitch: `A collateral-based lending service that offers fast, short-term, high-interest loans to individuals using their high-value [Y] as security.`, why: `Consumers with urgent needs and valuable [Y] assets are ignored by traditional banking. We offer instant liquidity against the market value of their [Y], charging massive interest, and mitigating risk by holding the collateral.`, tagline: `Cash now, collateral secured. We monetize immediate financial need against physical [Y].` },
-        'Leasing': { pitch: `A long-term rental service offering fixed monthly payments for businesses to access essential, high-cost [Y] equipment and infrastructure.`, why: `Businesses want to use [Y] without the massive upfront capital expense. We provide an OpEx solution, generating predictable, long-term monthly recurring revenue (MRR) with asset depreciation benefits.`, tagline: `Don't buy the [Y], lease the service. We turn CapEx into predictable OpEx.` },
-        'SquareSpace': { pitch: `A simple, drag-and-drop website builder designed specifically for solo entrepreneurs or small teams looking to launch a digital presence for [Y] quickly.`, why: `Entrepreneurs focused on [Y] need a professional digital storefront without learning to code. We provide the easiest-to-use platform, capturing high-margin subscription revenue from millions of micro-businesses.`, tagline: `Build your empire on [Y]. We are the fastest path to a professional website.` },
-        'SpaceX': { pitch: `A vertical integration model focused on drastically reducing the cost and increasing the reliability of essential services or infrastructure for the [Y] industry.`, why: `The cost of accessing critical infrastructure for [Y] is astronomical due to entrenched monopolies. We are vertically integrating the manufacturing and delivery of [Y]-related services, reducing costs by 90% and dominating the market.`, tagline: `We don't just innovate on [Y], we own the supply chain. Get ready for exponential returns.` },
-        'Houzz': { pitch: `A community-driven platform for home improvement and design, connecting homeowners and businesses with local professionals, products, and inspiration centered around [Y].`, why: `Homeowners and professionals struggle to find each other efficiently when dealing with [Y]. We aggregate all professional reviews, design photos, and product sales for the [Y] vertical, becoming the single point of contact for the entire ecosystem.`, tagline: `Dream big about your [Y] project. We connect the money to the talent.` },
-        'ZocDoc': { pitch: `The instant booking platform that allows users to search, review, and book immediate or scheduled appointments with certified [Y] professionals in their area.`, why: `Booking critical [Y] services is a phone-tag nightmare. We digitize the entire discovery and scheduling process, making access instant, transparent, and driving high conversion rates for service providers.`, tagline: `We sell certainty and speed for [Y] services. Book your success now.` },
-        'SalesLoft': { pitch: `An AI-powered sales engagement platform that automates outreach, personalization, and follow-up sequences for B2B companies selling high-value [Y].`, why: `Selling [Y] often involves complex, repetitive B2B sales cycles. We use AI to optimize every step of the sales pipeline, drastically cutting labor costs and boosting deal velocity for enterprise clients.`, tagline: `We automate your [Y] sales team. Invest in predictable, aggressive growth.` },
-        'Gumroad': { pitch: `A simple e-commerce tool enabling digital creators to sell creative goods, courses, or files related to [Y] directly to their audience with minimal platform friction.`, why: `Digital creators often lose huge cuts to large marketplaces when selling content about [Y]. We provide a clean, creator-friendly platform that maximizes profit for niche sellers, attracting the best talent.`, tagline: `Sell your [Y] content directly. We are the low-friction platform for digital wealth.` },
-        'TransferWise': { pitch: `The low-fee, transparent cross-border payment platform that facilitates instant currency exchange and transfers specifically for the international trade of [Y].`, why: `International trade of [Y] is slowed by massive hidden bank fees and opaque exchange rates. We provide a transparent, multi-currency account and instant transfer platform, dominating the fintech vertical for [Y].`, tagline: `We move money for [Y] faster and cheaper. Invest in global financial efficiency.` },
-        'Instapaper': { pitch: `The simple, distraction-free reading/listening platform that curates and saves long-form articles, analysis, and deep dives specifically related to [Y].`, why: `Deep, intellectual content about [Y] is lost in the noisy web. We provide a clean, subscription-based environment for consuming high-quality information, capturing the high-value audience that pays for focus.`, tagline: `We sell clarity and focus on [Y]. Invest in the attention economy.` },
-        'Poshmark': { pitch: `A mobile-first social marketplace where individuals can buy, sell, and trade curated, high-value, or secondhand [Y] items with a strong community layer.`, why: `The secondary market for [Y] lacks a trusted, social discovery engine. We make selling [Y] as simple as taking a photo, building a high-engagement, high-margin marketplace powered by user interaction.`, tagline: `Shop the closets of the world for [Y]. We turn social engagement into cash.` },
-        'Upwork': { pitch: `The global talent marketplace connecting businesses with remote freelancers and specialized agencies focused on high-demand skills related to [Y].`, why: `Finding specialized talent for [Y] projects is expensive and localized. We provide a vast, global, verified marketplace for freelance [Y] experts, capturing commissions on every dollar exchanged in this massive gig economy.`, tagline: `The world's best [Y] talent is one click away. We are the global labor liquidity pool.` },
-        'DocuSign': { pitch: `The leading e-signature and digital document management platform tailored for the complex contracts, forms, and legal processes unique to the [Y] industry.`, why: `The legal process for [Y] is slowed by manual paperwork and signing. We digitize and automate the entire workflow, achieving massive network effects and becoming the defacto standard for signing [Y] documents.`, tagline: `We make [Y] legally binding, digitally. Invest in the paperless future.` },
-        'Calendly': { pitch: `The automated scheduling tool that eliminates the back-and-forth of setting up meetings, appointments, and consultations with [Y] professionals or services.`, why: `Scheduling complex or high-volume interactions for [Y] is a huge time sink. We monetize efficiency by providing a simple link that automatically handles all time-zone conversions and availability conflicts for [Y] services.`, tagline: `Stop emailing, start meeting about [Y]. We sell time back to the professionals.` },
-        'Dropbox': { pitch: `The simple, cloud-based file synchronization and storage service optimized for the large, often complex digital files and documentation required for [Y].`, why: `Managing and sharing essential digital assets for [Y] is complicated and insecure. We provide the easiest-to-use, most reliable cloud storage solution, driving high subscription revenue from both consumers and businesses.`, tagline: `Your [Y] files, everywhere. We are the cloud where your business lives.` },
-        'Figma': { pitch: `The collaborative, cloud-based design and prototyping platform that enables teams to build, share, and iterate on complex visual assets and blueprints for [Y] in real-time.`, why: `Designing [Y] traditionally requires expensive, siloed desktop software. We moved the entire design workflow to the browser, enabling unprecedented collaboration and capturing the vast market of creative professionals.`, tagline: `Design the future of [Y], together. We are the collaborative canvas.` },
-        'WeWork': { pitch: `A flexible, subscription-based, shared physical space model offering hot desks, private offices, and community events for freelancers and companies operating in the [Y] sector.`, why: `The fixed-cost, long-term leases for commercial [Y] space are inflexible. We provide a highly convenient, month-to-month, community-focused solution, generating high per-square-foot revenue and capitalizing on the flexible work trend.`, tagline: `Own the experience, not the desk. We are the future of work for [Y].` },
-        'Coinbase': { pitch: `The regulated, easy-to-use digital exchange and wallet platform that allows consumers to safely buy, sell, and store digital assets and currencies related to [Y].`, why: `Entering the crypto/digital asset market for [Y] is complex and risky. We provide the most trusted, secure, and regulated on-ramp, collecting high transaction fees on every trade.`, tagline: `The most trusted name in [Y] digital assets. We are the bank of the future.` },
-        'Fair Trade': { pitch: `A fully transparent marketplace and certification system ensuring equitable wages and sustainable practices for every producer of [Y].`, why: `The current supply chain for [Y] is opaque and exploitative. We use blockchain verification and direct-to-producer sourcing to guarantee 80% of revenue goes back to the ethical source.`, tagline: `We sell [Y] with a conscience. Invest in transparent supply chains.` },
-        'Carbon Credits': { pitch: `A digital exchange and verification platform allowing businesses to instantly buy, sell, and retire verified carbon offsets directly tied to the production or use of [Y].`, why: `The environmental impact of [Y] is currently unmonetized and unmanaged. We turn emissions into a tradable, compliance-ready asset, capturing massive B2B demand for ESG reporting.`, tagline: `We monetize clean air for [Y]. Invest in the future of compliance.` },
-        'B Corp': { pitch: `A mission-driven company that legally balances profit and purpose, selling premium [Y] where 100% of profits are reinvested into environmental and social causes.`, why: `Consumers are demanding that brands selling [Y] take concrete social action. Our corporate structure locks in purpose, attracting high-value, loyal customers willing to pay a premium for guaranteed impact.`, tagline: `We are the profit engine with a purpose. Invest in stakeholder capitalism.` },
-        'TOMS': { pitch: `The "Buy One, Give One" model: for every [Y] sold, a donation, product, or service related to [Y] is given to a community in need.`, why: `Consumers want instant gratification and social impact in a single purchase. We simplify the donation process, linking every sale of [Y] directly to a measurable social good, driving viral marketing and brand loyalty.`, tagline: `We sell [Y] and social change. Invest in the feel-good economy.` },
-        'Circular': { pitch: `A highly profitable repair, refurbish, and resale service dedicated to extending the lifespan of premium [Y], eliminating waste and generating recurring service revenue.`, why: `The linear "buy-use-dispose" model for [Y] is environmentally catastrophic and wasteful. We disrupt this by capturing value at every stage of the product lifecycle, creating an endless revenue loop.`, tagline: `We stop waste and start profit for [Y]. We are the endless lifecycle of assets.` },
-        'Data Broker': { pitch: `The proprietary platform that passively collects, cleans, and sells high-value consumer and enterprise data streams specifically related to [Y].`, why: `Data on [Y] is fragmented and incredibly valuable to financial and consumer enterprises. We standardize, aggregate, and sell the insights at massive scale, capturing the invisible wealth of the information economy.`, tagline: `We sell the truth about [Y]. Data is the new oil, and we own the pipeline.` },
-        'Drop Shipping': { pitch: `A zero-inventory logistics platform that sells trending [Y] products directly to consumers through streamlined, automated supply chains.`, why: `We bypass the massive capital risk and overhead of traditional retail for [Y] by leveraging existing supplier networks. This asset-light model enables us to achieve explosive growth and margins with minimal risk.`, tagline: `High volume, zero risk. We are the ultimate asset-light dealer of [Y].` },
-        'Citizen Science': { pitch: `A crowd-sourced mobile or web platform where global users contribute critical data, effort, and intelligence to advance research on [Y].`, why: `Academic and corporate research into [Y] is slow and expensive. We turn a difficult process into a viral, gamified community effort, generating vast, high-quality data at a fraction of the cost.`, tagline: `We harness the hive mind for [Y]. Your unpaid passion is our profit.` },
-        'Social Network': { pitch: `A dedicated, high-engagement social platform where users share, connect, and validate their lives, identities, and experiences centered entirely around [Y].`, why: `The highly engaged audience for [Y] is underserved by generic social media giants. We capture 100% of their attention in a focused environment, generating premium ad revenue and high organic growth through niche appeal.`, tagline: `We own the attention span of [Y] fans. Social is the engine, cash is the fuel.` },
-        'Pyramid Scheme': { pitch: `**The recruitment-first, high-leverage marketing platform** selling high-value, proprietary [Y]. Our product is the *opportunity* to sell [Y].`, why: `Why invest in distribution when you can monetize human ambition? We empower an army of motivated, self-funding distributors who generate revenue through both sales of [Y] and massive recruitment fees.`, tagline: `We don't sell [Y], we sell the **DREAM** of selling [Y]. Invest in infinite, self-replicating growth.` },
-        'Casino': { pitch: `A fully licensed, high-roller gambling operation offering high-stakes betting and games centered around the uncertainty and chaotic outcomes of [Y].`, why: `The appeal of [Y] is based on risk and reward, which we monetize by implementing a scientifically engineered **house edge**. Our high-margin model ensures passive, reliable revenue regardless of customer outcome.`, tagline: `The **HOUSE** always wins on [Y]. We sell high-stakes entertainment and guaranteed margin.` },
-        'Lottery': { pitch: `A high-jackpot, low-cost game of chance offering life-changing prizes based on a drawing related to [Y]. **You just need one ticket to win it all!**`, why: `We tap into the universal, addictive human desire for instant wealth with a high-volume, low-cost product. Our highly profitable model operates as a legal monopoly, generating massive cash flow from millions of small transactions.`, tagline: `We sell **HOPE** for a dollar. We are the ultimate high-volume, low-cost monopoly for [Y].` },
-        'Spirit Halloween': { pitch: `A pop-up seasonal retail strategy that aggressively leases vacant storefronts for 6-8 weeks to sell high-margin, trending [Y] goods, **then vanishes into the night**.`, why: `We exploit market inefficiencies (vacant commercial leases) and seasonal demand for [Y]. This **asset-light, temporary model** allows for maximum profit capture with zero long-term overhead or risk.`, tagline: `Short-term lease, maximum profit. We own Q4 [Y] sales and **vanish** before the rent is due.` },
-        'VR': { pitch: `The immersive digital platform offering highly realistic, sensory-driven experiences and training modules for [Y] in a zero-risk virtual environment.`, why: `Training or experiencing [Y] physically is expensive, high-risk, or geographically limited. We use VR technology to digitize the experience, providing scalable, repeatable, and cost-effective mastery in a virtual world.`, tagline: `Step into the future of [Y]. We are the pioneers of immersive, profitable experience platforms.` },
+        'Uber': { pitch: `It's the on-demand platform connecting certified [Y] experts with users needing immediate, location-based service.`, why: `The [Y] industry is currently dominated by slow, expensive manual booking.`, tagline: `We're making [Y] happen at the speed of a tap.` },
+        'Airbnb': { pitch: `The peer-to-peer marketplace where users can rent, borrow, or share access to unique, underutilized [Y].`, why: `Ownership of [Y] is expensive and inefficient. We turn every underutilized [Y] into a profit-generating asset.`, tagline: `We're democratizing access to [Y].` },
+        'Netflix': { pitch: `A subscription service offering exclusive, curated access to a rotating library of digital or physical [Y].`, why: `The consumption of [Y] is currently transactional and fragmented.`, tagline: `Stop buying, start subscribing to [Y].` },
+        'Stripe': { pitch: `The embedded finance Application Programming Interface (API) that handles all payment processing, compliance, and transactions specifically for [Y].`, why: `Payments and regulatory compliance are the biggest friction points for the nascent [Y] market.`, tagline: `We are the financial backbone of [Y].` },
+        'Slack': { pitch: `A dedicated communication platform for teams collaborating on, managing, or trading high volumes of [Y].`, why: `Teams dealing with [Y] rely on scattered email chains and legacy tools.`, tagline: `Stop sending emails about [Y].` },
+        'Shopify': { pitch: `A complete e-commerce solution that lets anyone set up an online store in minutes to sell custom [Y].`, why: `Small businesses selling niche [Y] lack the tools to compete online.`, tagline: `We arm the rebels selling [Y].` },
+        'Instacart': { pitch: `The personal delivery service that gets any type of [Y] delivered directly to your door in under an hour.`, why: `The last-mile logistics for [Y] is broken, manual, and slow.`, tagline: `Get your [Y] now. We own the shortest path.` },
+        'Tinder': { pitch: `The ultimate discovery app that uses a simple swipe interface to match users with their ideal [Y].`, why: `Finding the right [Y] is currently a painful, manual process.`, tagline: `Swipe right on your perfect [Y].` },
+        'Twitch': { pitch: `A live-streaming platform focused entirely on creators producing, using, or discussing the best of [Y].`, why: `The culture around [Y] is currently static. We enable real-time community around [Y].`, tagline: `The world watches [Y] live.` },
+        'GitHub': { pitch: `A version control and collaboration platform where the community can contribute, fork, and manage open-source [Y] projects.`, why: `The development and documentation for [Y] is fragmented and proprietary.`, tagline: `We are the infrastructure for [Y] innovation.` },
+        'ChatGPT': { pitch: `A viral conversational Artificial Intelligence (AI) platform that leverages a state-of-the-art Large Language Model (LLM) to generate, summarize, or converse about [Y].`, why: `Generating intelligence around [Y] requires massive human effort.`, tagline: `We are the conversational layer for the [Y] economy.` },
+        'Midjourney': { pitch: `The revolutionary Artificial Intelligence (AI) model for generating stunning, high-fidelity artistic visuals of imaginary [Y].`, why: `Visualization of complex [Y] concepts is time-consuming and expensive.`, tagline: `Imagine [Y].` },
+        'Red Bull': { pitch: `A premium, category-defining lifestyle brand focused on providing peak energy for consumers engaging with [Y].`, why: `[Y] lacks a charismatic, highly profitable brand champion.`, tagline: `We don't sell [Y], we sell the identity.` },
+        'HelloFresh': { pitch: `The subscription box service that delivers pre-portioned ingredients and easy-to-follow recipes for assembling, maintaining, or creating unique [Y].`, why: `The complexity or necessary curation of [Y] creates a high barrier to entry.`, tagline: `We ship the perfect [Y] experience to your door.` },
+        'Lime': { pitch: `The dockless rental app that lets users find, unlock, and pay-per-use for [Y] located anywhere in their city.`, why: `Ownership of [Y] is impractical for most people.`, tagline: `We are the first mile for [Y].` },
+        'Ethereum': { pitch: `A decentralized platform leveraging smart contracts to automate transactions and ownership of [Y].`, why: `The industry surrounding [Y] is plagued by trust issues and centralized control.`, tagline: `We remove the middleman for [Y].` },
+        'Zillow': { pitch: `The comprehensive online marketplace that aggregates real-time data, valuations, and listings for [Y].`, why: `The opaque pricing and lack of centralized data around [Y] allows insiders to exploit the market.`, tagline: `We are bringing transparency to [Y].` },
+        'Zoom': { pitch: `The premium, high-fidelity video conferencing platform that enables real-time, interactive consulting services centered around [Y].`, why: `Specialized consulting for [Y] is currently limited by geography.`, tagline: `One platform to connect [Y].` },
+        'Patreon': { pitch: `A membership platform that allows fans to directly fund creators and experts who produce premium content about [Y].`, why: `Niche creators focused on [Y] struggle to escape platform algorithms.`, tagline: `We are funding the passion for [Y].` },
+        'Duolingo': { pitch: `The gamified educational app that uses short, interactive daily lessons to help users master [Y].`, why: `Learning [Y] is typically boring and expensive.`, tagline: `Spend five minutes a day mastering [Y].` },
+        'Amazon Web Services': { pitch: `A cloud-based utility that offers scalable infrastructure specifically tailored for building and managing [Y].`, why: `Scaling technology for [Y] requires massive upfront capital.`, tagline: `We are the utility company for the [Y] economy.` },
+        'Peloton': { pitch: `A connected experience combining proprietary hardware for [Y] with a monthly subscription for live instructional content.`, why: `The [Y] market is fragmented. We combine hardware with sticky content.`, tagline: `The future of [Y] is connected.` },
+        'Mint': { pitch: `The unified data aggregator that provides users with a single, clear dashboard for tracking and managing their [Y].`, why: `Managing the data complexity of [Y] is overwhelming.`, tagline: `We take the chaos out of [Y].` },
+        'OnlyFans': { pitch: `The private, direct-to-consumer platform where specialized creators can monetize exclusive content or services focused on [Y].`, why: `Experts in [Y] often create content too niche for mass platforms.`, tagline: `Paywalling the best [Y] content.` },
+        'Harlem Globetrotters': { pitch: `A touring theatrical sports league that combines spectacle, comedy, and audience participation centered around [Y].`, why: `Live entertainment lacks novelty. We infuse [Y] with high-production value.`, tagline: `Not just [Y], it's a show.` },
+        'Square': { pitch: `The integrated hardware and software platform providing all Point of Sale (POS) and inventory tools for businesses dealing in [Y].`, why: `Small businesses selling [Y] are forced to use generic POS systems.`, tagline: `Powering [Y] commerce.` },
+        'Discord': { pitch: `The ultimate community platform providing structured voice and text channels for fans to discuss [Y].`, why: `The passionate community around [Y] is scattered across low-quality forums.`, tagline: `Your place to talk [Y].` },
+        'Roblox': { pitch: `A user-generated virtual world where communities can buy, build, and monetize digital assets related to [Y].`, why: `The creative passion for [Y] is confined to the physical world.`, tagline: `Powering imagination for [Y].` },
+        'Substack': { pitch: `The direct-to-consumer email publishing platform for experts to monetize deep insights about [Y].`, why: `Expert knowledge about [Y] is hidden behind traditional media paywalls.`, tagline: `The intellectual home for [Y].` },
+        'Warby Parker': { pitch: `A Direct-to-Consumer (DTC) brand that vertically integrates design and sales to offer high-quality [Y] without markups.`, why: `The incumbent [Y] industry is fragmented and overpriced.`, tagline: `Designer [Y] at mass prices.` },
+        'GoFundMe': { pitch: `The centralized social fundraising platform enabling quick campaigns for projects dedicated to [Y].`, why: `Funding small-scale [Y] projects is difficult and opaque.`, tagline: `Help [Y] happen.` },
+        'Turo': { pitch: `The peer-to-peer rental marketplace that allows individuals to safely rent out their high-value [Y].`, why: `High-value [Y] assets sit idle most of the time.`, tagline: `Don't buy [Y], rent the experience.` },
+        'Headspace': { pitch: `The hyper-focused wellness app offering guided sessions and tools to improve mental clarity related to [Y].`, why: `The psychological stress associated with [Y] is unaddressed.`, tagline: `Be kind to your [Y] mind.` },
+        'TikTok': { pitch: `A hyper-personalized, short-form video feed that uses an algorithmic discovery engine for content about [Y].`, why: `Information about [Y] is locked in long-form content. We make it viral.`, tagline: `Make every [Y] second count.` },
+        'Tesla': { pitch: `A vertically integrated brand that sells [Y] directly to the consumer, owning the entire maintenance ecosystem.`, why: `The incumbent [Y] industry relies on expensive middleman networks.`, tagline: `We are the future of [Y].` },
+        'Salesforce': { pitch: `The cloud-based Enterprise Customer Relationship Management (CRM) designed specifically to handle the complex sales pipeline for [Y].`, why: `Companies dealing in [Y] use generic tools that require massive customization.`, tagline: `The enterprise cloud for [Y].` },
+        'Vanguard': { pitch: `A low-cost, automated investment platform providing index fund access specifically for the [Y] market.`, why: `Investing in [Y] is often complex and filled with high fees.`, tagline: `The smart way to hold [Y].` },
+        'Pinterest': { pitch: `A visual discovery engine where users collect, share, and shop for ideas related to [Y].`, why: `The journey from inspiration to purchase for [Y] is disjointed.`, tagline: `Plan your perfect [Y].` },
+        'Costco': { pitch: `A members-only, bulk retail model offering extreme discounts on essential [Y] products.`, why: `Consumers need high-quality [Y] at predictable, low prices.`, tagline: `High volume, low cost [Y].` },
+        'Medium': { pitch: `A paid content platform for expert journalists and writers to monetize deep insights about [Y].`, why: `Complex analysis of [Y] is often lost in clickbait.`, tagline: `Where good ideas about [Y] find you.` },
+        'Timeshares': { pitch: `A fractional ownership model where users buy a deeded week of access to high-value [Y] assets.`, why: `Expensive [Y] assets are rarely used by their sole owner.`, tagline: `Your slice of [Y] paradise.` },
+        'Franchise': { pitch: `A standardized, replicable business system where local entrepreneurs pay to sell [Y] in their territory.`, why: `The market for [Y] is local, but the model lacks consistency.`, tagline: `Own your own [Y] location.` },
+        'Gillette': { pitch: `The classic "Bait and Hook" model: sell the primary [Y] hardware at cost and drive revenue from consumables.`, why: `We create a captive audience by locking users into a proprietary system for [Y].`, tagline: `The best a [Y] can get.` },
+        'Consignment': { pitch: `A retail model where owners submit specialized [Y] inventory, which we sell for a commission.`, why: `The secondary market for [Y] is fragmented and trust is low.`, tagline: `The luxury resale market for [Y].` },
+        'Agency': { pitch: `A service-based model that connects and manages high-demand [Y] professionals for clients.`, why: `Finding and vetting qualified [Y] talent is time-consuming.`, tagline: `We handle the [Y] for you.` },
+        'Pawn Shop': { pitch: `A collateral-based lending service offering fast, short-term loans using [Y] as security.`, why: `Consumers with [Y] assets are ignored by traditional banking.`, tagline: `Cash for your [Y], today.` },
+        'Leasing': { pitch: `A long-term rental service offering fixed monthly payments for businesses to access essential [Y].`, why: `Businesses want to use [Y] without the massive upfront capital expense.`, tagline: `Drive the [Y], don't own it.` },
+        'SquareSpace': { pitch: `A simple website builder designed specifically for entrepreneurs launching a digital presence for [Y].`, why: `Entrepreneurs focused on [Y] need a professional storefront without coding.`, tagline: `Build your empire on [Y].` },
+        'SpaceX': { pitch: `A vertical integration model focused on drastically reducing the cost of essential infrastructure for [Y].`, why: `The cost of accessing critical infrastructure for [Y] is astronomical.`, tagline: `Making [Y] multi-planetary.` },
+        'TransferWise': { pitch: `The low-fee, transparent cross-border payment platform for international trade of [Y].`, why: `International trade of [Y] is slowed by massive hidden bank fees.`, tagline: `We move money for [Y] faster.` },
+        'Upwork': { pitch: `The global talent marketplace connecting businesses with freelancers focused on [Y].`, why: `Finding specialized talent for [Y] projects is expensive.`, tagline: `The world's best [Y] talent.` },
+        'DocuSign': { pitch: `The leading e-signature platform tailored for the complex contracts unique to the [Y] industry.`, why: `The legal process for [Y] is slowed by manual paperwork.`, tagline: `Agree to [Y] faster.` },
+        'Calendly': { pitch: `The automated scheduling tool that eliminates the back-and-forth of setting up [Y] appointments.`, why: `Scheduling complex interactions for [Y] is a huge time sink.`, tagline: `Easy scheduling ahead for [Y].` },
+        'Dropbox': { pitch: `The simple, cloud-based file synchronization service optimized for large [Y] documentation.`, why: `Managing essential digital assets for [Y] is complicated.`, tagline: `Keep your [Y] safe.` },
+        'WeWork': { pitch: `A flexible, shared physical space model offering community events for [Y] companies.`, why: `Leases for commercial [Y] space are inflexible.`, tagline: `Space as a service for [Y].` },
+        'Coinbase': { pitch: `The regulated digital exchange allowing consumers to safely buy and sell assets related to [Y].`, why: `Entering the asset market for [Y] is complex and risky.`, tagline: `The bank of the future for [Y].` },
+        'Fair Trade': { pitch: `A transparent marketplace ensuring equitable wages for every producer of [Y].`, why: `The supply chain for [Y] is opaque.`, tagline: `Guilt-free [Y] consumption.` },
+        'Carbon Credits': { pitch: `A digital exchange for buying and retiring verified carbon offsets tied to [Y].`, why: `The environmental impact of [Y] is unmonetized.`, tagline: `Monetize clean air for [Y].` },
+        'Benefit Corporation': { pitch: `A mission-driven company selling premium [Y] where profits are reinvested into social causes.`, why: `Consumers demand brands selling [Y] take social action.`, tagline: `Stakeholder capitalism for [Y].` },
+        'TOMS': { pitch: `The "Buy One, Give One" model: for every [Y] sold, a donation is given to a community in need.`, why: `Consumers want instant social impact with their purchase.`, tagline: `We sell [Y] and social change.` },
+        'Circular': { pitch: `A profitable repair and resale service dedicated to extending the lifespan of [Y].`, why: `The "buy-dispose" model for [Y] is wasteful.`, tagline: `We are the endless lifecycle of [Y].` },
+        'Data Broker': { pitch: `The platform that passively collects and sells high-value consumer data related to [Y].`, why: `Data on [Y] is fragmented and valuable.`, tagline: `You are the product, [Y] is the data.` },
+        'Drop Shipping': { pitch: `A zero-inventory logistics platform that sells trending [Y] products directly to consumers.`, why: `We bypass the capital risk of traditional retail for [Y].`, tagline: `We touch the money, not the [Y].` },
+        'Citizen Science': { pitch: `A crowd-sourced platform where users contribute data to advance research on [Y].`, why: `Academic research into [Y] is slow.`, tagline: `Science by the people, for [Y].` },
+        'Social Network': { pitch: `A dedicated platform where users connect and validate their lives around [Y].`, why: `The audience for [Y] is underserved by generic social media.`, tagline: `The social graph of [Y].` },
+        'Pyramid Scheme': { pitch: `The recruitment-first platform selling [Y]. Our product is the *opportunity* to sell [Y].`, why: `We monetize human ambition and recruitment.`, tagline: `It's not a scam, it's Multi-Level Marketing (MLM) for [Y].` },
+        'Casino': { pitch: `A fully licensed gambling operation offering high-stakes betting on [Y].`, why: `The appeal of [Y] is based on risk and reward.`, tagline: `The house always wins on [Y].` },
+        'Lottery': { pitch: `A high-jackpot game of chance offering life-changing prizes based on [Y].`, why: `We tap into the desire for instant wealth.`, tagline: `Selling hope for a dollar.` },
+        'Spirit Halloween': { pitch: `A pop-up retail strategy that leases vacant storefronts to sell [Y], then vanishes.`, why: `We exploit market inefficiencies in real estate.`, tagline: `We appear, sell [Y], and vanish.` },
+        'Virtual Reality': { pitch: `The immersive platform offering realistic experiences and training for [Y].`, why: `Experiencing [Y] physically is expensive or high-risk.`, tagline: `Step into the future of [Y].` },
+        'Decentralized Autonomous Organization': { pitch: `A Decentralized Autonomous Organization (DAO) governing the future of [Y].`, why: `Centralized control of [Y] stifles innovation.`, tagline: `The community owns the [Y].` },
+        'Augmented Reality': { pitch: `An Augmented Reality (AR) layer that overlays digital information onto physical [Y].`, why: `The physical experience of [Y] is static.`, tagline: `See [Y] in a new light.` },
+        'Fractional': { pitch: `A platform for buying and selling fractional equity in high-value [Y].`, why: `Most people are priced out of owning [Y].`, tagline: `Own a piece of the [Y].` },
+        'Venture Builder': { pitch: `A factory model that rapidly incubates and launches multiple startups focused on [Y].`, why: `Building a [Y] company is too slow.`, tagline: `We build the builders of [Y].` },
+        'Hedge Fund': { pitch: `A high-risk, managed investment vehicle focused exclusively on the [Y] market.`, why: `The volatility of [Y] creates massive alpha opportunities.`, tagline: `Beating the market on [Y].` },
+        'Buy Now Pay Later': { pitch: `Buy Now Pay Later (BNPL) lending that lets consumers buy [Y] now and pay later.`, why: `The upfront cost of [Y] reduces conversion.`, tagline: `Split your [Y] into 4 payments.` },
+        'Alibaba': { pitch: "B2B sourcing for [Y].", why: "Global supply chain dominance.", tagline: "The world's factory for [Y]." },
+        'Robinhood': { pitch: "Gamified trading of [Y].", why: "Zero-commission, addictive access.", tagline: "Democratizing finance for [Y]." },
+        'Twilio': { pitch: "Communication Application Programming Interface (API) for [Y].", why: "Programmatic Short Message Service (SMS) and Voice for [Y].", tagline: "We are the pipes for [Y]." },
+        'Snapchat': { pitch: "Ephemeral Augmented Reality (AR) for [Y].", why: "Privacy-focused, visual sharing.", tagline: "Disappearing proof of [Y]." },
+        'MasterClass': { pitch: "Cinema-quality online courses taught by the world's most famous [Y] experts.", why: "Education is boring. We make learning [Y] feel like watching a blockbuster movie with A-list celebrities.", tagline: "Learn [Y] from the best." },
+        'Cameo': { pitch: "A marketplace for personalized video shoutouts from [Y] celebrities and influencers.", why: "Access to [Y] fame is gated. We provide direct, paid access for fans to interact with their heroes.", tagline: "Personal connections with [Y] stars." },
+        'IKEA': { pitch: "Stylish, affordable, flat-pack [Y] that customers assemble themselves.", why: "Logistics costs for [Y] are too high. We shift the assembly labor to the consumer to lower prices and increase margins.", tagline: "Some assembly required. Democratic design for [Y]." },
+        'Patagonia': { pitch: "High-performance [Y] gear with an ironclad environmental mission and lifetime repair guarantee.", why: "Consumers are tired of disposable goods. We build brand loyalty through radical sustainability and political activism for [Y].", tagline: "We're in business to save the [Y]." },
+        'TaskRabbit': { pitch: "A marketplace connecting users with local freelancers to help with everyday [Y] tasks and chores.", why: "People have no time for [Y]. We monetize convenience by outsourcing the grunt work to trusted locals.", tagline: "We do the [Y] so you don't have to." }
     };
 
-    // Updated nouns list (Y factor) - TOTAL 244
-    const nouns = [
-        "Socks", "Pineapples", "Clouds", "Robots", "Pencils", "Dreams", 
-        "Doorknobs", "Teapots", "Unicorns", "Banjos", "Toasters", "Glaciers", 
-        "Spaghetti", "Satellites", "Whistles", "Hugs", "Shadows", "Rubber Ducks",
-        "Turtles", "Keyboards", "Magnets", "Crystals", "Ladders", "Gravel",
-        "Waffles", "Librarians", "Submarines", "Velvet", "Helmets", "Bricks",
-        "Trombones", "Algae", "Volcanoes", "Comets",
-        // --- HIGH-FRICTION/HIGH-VALUE ASSETS (51 Total) ---
-        "Jetskis", "Construction Cranes", "Yachts", "Farm Equipment", "Microscope Time", 
-        "Industrial 3D Printers", "Shipping Containers", "Offices", "Wedding Dresses", "Recording Studios", 
-        "Solar Panels", "Elder Care", "Data Scientists", 
-        "Private Jets", "Data Centers", "Specialized Medical Equipment", "Construction Waste", "Commercial Kitchens", "Artisanal Bread", "Rare Books",
-        "Industrial Lasers", "Server Racks", "Hydroponic Farms", "Used Car Parts", 
-        "Patents", "Commercial Drones", "Temporary Fencing", "Luxury Cars",
-        "Offshore Wind Farms", "Nuclear Reactors", "Historical Landmarks", "Deep-Sea Mining Rights", "Cattle Ranches", "Vineyards", "Private Islands", "Gold Bullion", "Rare Earth Minerals",
+    const Y_NOUNS = [
+        // High Friction / Value
+        "Helicopter Simulators", "Quantum Computing", "Offshore Wind Farms", "Nuclear Reactors", "Private Islands", 
+        "Construction Cranes", "Industrial Lasers", "Luxury Cars", "Data Centers", "Private Jets", 
+        "Gold Bullion", "Rare Earth Minerals", "Vintage Synthesizers", "Antique Maps", "Tax Liens",
+        "Patents", "Biometric Data", "Server Racks", "Hydroponic Farms", "Used Car Parts", 
+        "Commercial Drones", "Wedding Dresses", "Recording Studios", "Solar Panels", "Elder Care", 
+        "Artisanal Bread", "Rare Books", "Historical Landmarks", "Deep-Sea Mining Rights", "Vineyards",
         "Propeller Hats", "Antique Typewriters", "Arcade Cabinets", "Llama Rental",
-        "Giant Novelty Checks", "Tax Liens", "Mural Spaces", "High-Security Safes", 
-        "Pinball Machines", "Vintage Synthesizers", "Professional Dancers", "Medieval Armor",
-        "Snow Globes", "Public Bench Ad Space", "Helicopter Simulators",
-        // --- ABSTRACT/INTANGIBLE CONCEPTS (76 Total) ---
-        "Compliance", "Feedback", "Silence", "Legal Filings", "Regret", 
-        "Personal Identity", "Attention", "Procrastination", "Trust", "Ambition", 
-        "Digital Privacy", "Bureaucracy", "Inspiration", "Karma", "Noise", 
-        "Small Talk", "Focus", "Invoices",
-        "Synesthesia", "Serendipity", "Cognitive Biases", "Intuition", 
-        "Reputation", "Empathy", "Emotional Intelligence", "Time Travel", "The Metaverse", "Ethics", "Wisdom",
-        "Nostalgia", "Hope", "Chaos", "Discipline", "Grit", "Patience", "Failure", "Success",
-        "Sentiment", "Cognitive Load", "Inertia", "Synergy", 
-        "Default Settings", "Hunches", "Ethical Dilemmas", "Proof of Concept",
-        "Improvisation", "Jokes", // NEW ABSTRACT/COMEDIC CONCEPTS
-        "Existential Dread", "Existential Threat", "Consciousness", "Self-Actualization", 
-        "Emotional Baggage", "Sleep Paralysis", "Personal History", "Collective Memory", 
-        "Public Opinion", "Market Sentiment", "Truth", "Meaning of Life", "Existence", "Authenticity", "Social Capital",
-        "Misinformation", "Politeness", "Good Intentions", "Office Gossip", 
-        "Dunning-Kruger Effect", "Imposter Syndrome", "Bad Habits", "Inside Jokes",
-        "Coincidence", "Deja Vu", "Buyer's Remorse", "Corporate Buzzwords",
-        // --- VERTICAL CONSUMER NICHES/ACTIVITIES (117 Total) ---
-        "Soccer", "Drones", "Fine Art", "Yoga", "NFTs", 
-        "Vinyl Records", "Bonsai Trees", "Custom Keycaps", "Board Games", 
-        "Exotic Houseplants", "Fountain Pens", "Home Brewing", "Mechanical Watches", 
-        "Vintage Video Games", "Petting Zoos", "Model Trains", "Rare Spices", 
-        "Beekeeping", "Astrophotography",
-        "Sourdough Starters", "Terrariums", "Model Rockets", "Urban Foraging", 
+        "Giant Novelty Checks", "Mural Spaces", "High-Security Safes", 
+        "Pinball Machines", "Professional Dancers", "Medieval Armor", "Snow Globes", "Public Bench Ad Space",
+        // Abstract / Psychological
+        "Hubris", "Compliance", 
+        "Silence", "Personal Identity", "Attention", 
+        "Bureaucracy", "Karma", "Noise", "Small Talk", "Focus", 
+        "Inertia", "Synergy", "Hunches", "Proof of Concept",
+        "Collective Memory", "Public Opinion", "Market Sentiment",
+        "Misinformation", "Politeness", "Good Intentions", "Office Gossip",
+        "Bad Habits", "Inside Jokes", "Coincidence", "Deja Vu", "Corporate Buzzwords",
+        // Niche / Funny / Theatrical
+        "Professional Complaining", "Lucha Libre Wrestling", "Rubber Chickens", 
+        "Competitive Scrabble", "Urban Exploration", "Miniature Painting", "Acoustic Guitar Effects", "Whale Watching", 
+        "Unicycling", "Competitive Dog Grooming", "Theatrical Fights", "Professional Yodeling", "Puppet Shows", 
+        "Hot Sauce Collection", "Clowns", "Magicians", "Mime Artists", "Ventriloquism", 
+        "Juggling", "Balloon Animals", "Tequila", "Wine Caves", "Microplastics", 
+        "Deep Sea Exploration", "Sourdough Starters", "Terrariums", "Model Rockets", "Urban Foraging",
         "Custom Sneakers", "Comic Books", "Vintage Cameras", "Fly Fishing", "Rock Climbing",
         "Escape Rooms", "Lego Sets", "Dungeons and Dragons", "Geocaching", "Taxidermy", 
         "Bird Watching", "Calligraphy", "Locksmithing", "Genealogy", "Puppetry",
@@ -543,81 +258,55 @@
         "Espresso Machines", "Urban Art", "Home Automation", "Antique Maps",
         "Custom Dolls", "Vintage Clothing", "Hot Rods", "Model Airplanes", 
         "Sailing", "Archery", "Pottery", "Needlepoint",
-        "Clowns", "Magicians", "Mime Artists", "Ventriloquism", "Juggling", "Balloon Animals", // NEW COMEDIC/PERFORMANCE
-        "Tequila", "Guitars", "Wine Caves", "Microplastics", "Deep Sea Exploration",
-        "Lucha Libre Wrestling", "Artisanal Bread", "High-End Coffee Beans", "Luxury Pens", "Custom Motorcycles",
-        "Vintage Computers", "Rare Stamps", "Boutique Perfumes", "Exotic Leathers", "Haute Couture",
-        "Micro-Breweries", "Food Trucks", "Survival Gear", "Ghost Hunting", "Competitive Eating",
-        "Fossil Hunting", "Restoration Projects", "Amateur Radio", "Cosplay", "Podcasting",
-        "E-Bikes", "Smart Luggage", "Vertical Farms", "Digital Art Commissions", "Aged Cheese",
-        "Bespoke Suits", "Hot Air Balloons", "Formula 1 Memorabilia", "High Altitude Kites", "Biohacking",
-        "Competitive Scrabble", "Urban Exploration", "Miniature Painting", "Acoustic Guitar Effects",
-        "Whale Watching", "Professional Wrestling Moves", "Unicycling", "Competitive Dog Grooming",
-        "Theatrical Fights", "Professional Yodeling", "Rubber Chickens", "Home Aquariums",
-        "Puppet Shows", "Hot Sauce Collection"
+        "Original Film Props", "Notification Fatigue", "Meeting Agendas", "Fountain Pens", "Exotic Houseplants",
+        "Dioramas", "Model Trains"
     ];
 
-    
-    // The generateLogo function and related API code are now completely removed.
+    function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    function copyToClipboard() {
+        const idea = document.getElementById('ideaText').textContent;
+        const text = `I just generated the next unicorn on BillionDollarPitches.com:\n\n🚀 ${idea}\n\nLaunch the Capital Engine: https://billiondollarpitches.com`;
+        navigator.clipboard.writeText(text).then(() => alert('Pitch copied to clipboard! Go sell it.'));
+    }
+
+    function shareOnTwitter() {
+        const idea = document.getElementById('ideaText').textContent;
+        const text = encodeURIComponent(`I just generated the next unicorn: ${idea}. \n\nIs my exit guaranteed? \n\nGenerate yours: https://billiondollarpitches.com`);
+        window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+    }
 
     const generateIdea = () => {
-        // --- Setup ---
-        const ideaTextElement = document.getElementById('ideaText');
-        const pitchTextElement = document.getElementById('pitchText');
-        const resultContainer = document.getElementById('resultContainer');
-        const sharkTankPitchElement = document.getElementById('sharkTankPitch');
-        const sampleNamesElement = document.getElementById('sampleNames');
-
-        // --- Core Randomization Logic ---
-        const modelKeys = Object.keys(modelData);
-        const randomModelIndex = Math.floor(Math.random() * modelKeys.length);
-        const successfulBusiness = modelKeys[randomModelIndex];
-        const selectedModel = modelData[successfulBusiness];
+        const keys = Object.keys(modelData);
+        const x = getRandom(keys);
+        const y = getRandom(Y_NOUNS);
+        const model = modelData[x];
         
-        const randomIndex = Math.floor(Math.random() * nouns.length);
-        const randomNoun = nouns[randomIndex];
-        const lowerNoun = randomNoun.toLowerCase();
-
-        // 3. Generate Market Estimates (Used only for pitch text now)
-        const estimates = generateMarketEstimate();
+        // Calculated values
+        const valuation = (Math.random() * 10 + 1).toFixed(1);
+        const names = generateNames(x, y);
         
-        // 4. Generate Names
-        const names = generateNames(successfulBusiness, randomNoun);
+        // Update DOM
+        document.getElementById('ideaText').textContent = `${x} for ${y}`;
+        // document.getElementById('pitchText').textContent = ""; // Element removed from DOM
         
-        // --- Idea Generation ---
-        const ideaText = `${successfulBusiness} for ${randomNoun}`;
+        // New problem statement logic
+        document.getElementById('problemText').textContent = model.why.replace(/\[Y\]/g, y);
+
+        // marketValuation element was removed from DOM in previous edit, so remove JS update
+        // document.getElementById('marketValuation').textContent = `$${valuation}B`; 
         
-        // 6. Generate pitches using the modelData and replacing the placeholder "[Y]"
-        const shortPitch = selectedModel.pitch.replace(/\[Y\]/g, lowerNoun); 
-        // const whyPitch = selectedModel.why.replace(/\[Y\]/g, lowerNoun); // not displayed
-        // Ensure the shark pitch uses the generated market estimates for maximum gaudiness
-        const sharkPitch = selectedModel.tagline.replace(/\[Y\]/g, lowerNoun) + ` ${estimates.pitch.replace(/\[Y\]/g, lowerNoun)}`; // Use tagline + estimate for closing pitch
-
-        // 7. Display the result
-        ideaTextElement.textContent = ideaText;
-        pitchTextElement.textContent = shortPitch;
+        // Combine tagline and market estimate for Shark Tank pitch
+        const marketEst = generateMarketEstimate();
+        document.getElementById('sharkTankPitch').textContent = `"${model.tagline.replace(/\[Y\]/g, y)} ${marketEst.pitch.replace(/\[Y\]/g, y)}"`;
         
-        sharkTankPitchElement.textContent = sharkPitch;
-        sampleNamesElement.innerHTML = names.map(name => `<span class="inline-block bg-amber-400 text-gray-900 px-3 py-1 rounded-full mr-2 mb-2 font-bold">${name}</span>`).join('');
+        document.getElementById('sampleNames').innerHTML = names;
 
-
-        resultContainer.classList.remove('hidden');
-
-        // Optional: Scroll to the result smoothly
-        if (document.readyState !== 'loading') {
-            resultContainer.scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // Logo generation call removed.
+        document.getElementById('resultContainer').classList.remove('hidden');
+        document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
     };
 
-    // Note: The dropdown is now disabled but still serves to display the selected model.
     document.getElementById('generateButton').addEventListener('click', generateIdea);
-
-    // --- REMOVED: window.onload = generateIdea; ---
-    // The page now starts with the result container hidden.
-
-    console.log("Idea Generator is ready. Click the button to brainstorm!");
 </script>
 
 </body>
